@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { useCMEditViewDataManager } from '@strapi/helper-plugin';
-import { get } from 'lodash';
+import React from "react";
+import PropTypes from "prop-types";
+import { useCMEditViewDataManager } from "@strapi/helper-plugin";
+import { get } from "lodash";
 import {
   Field,
   FieldLabel,
@@ -11,9 +11,9 @@ import {
   Option,
   Stack,
   Typography,
-} from '@strapi/design-system';
-import { useIntl } from 'react-intl';
-import pluginId from '../../pluginId';
+} from "@strapi/design-system/v2";
+import { useIntl } from "react-intl";
+import pluginId from "../../pluginId";
 
 const SelectorField = ({
   value,
@@ -32,7 +32,7 @@ const SelectorField = ({
   const { allLayoutData } = useCMEditViewDataManager();
   const pluginOptions = get(
     allLayoutData,
-    `contentType.pluginOptions.${pluginId}`,
+    `contentType.pluginOptions.${pluginId}`
   );
   const tagsEnabled = !!pluginOptions;
 
@@ -88,7 +88,7 @@ SelectorField.defaultProps = {
   error: null,
   labelAction: null,
   required: false,
-  value: '',
+  value: "",
 };
 
 SelectorField.propTypes = {

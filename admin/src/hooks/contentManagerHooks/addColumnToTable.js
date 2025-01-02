@@ -1,8 +1,8 @@
-import React from 'react';
-import get from 'lodash/get';
-import styled from 'styled-components';
-import { Status, Typography } from '@strapi/design-system';
-import pluginId from '../../pluginId';
+import React from "react";
+import get from "lodash/get";
+import styled from "styled-components";
+import { Status, Typography } from "@strapi/design-system/v2";
+import pluginId from "../../pluginId";
 
 const StyledStatus = styled(Status)`
   width: min-content;
@@ -17,10 +17,10 @@ const addColumnToTableHook = ({ displayedHeaders, layout }) => {
     displayedHeaders: [
       ...displayedHeaders,
       {
-        key: '__contenttags_key__',
-        fieldSchema: { type: 'string' },
+        key: "__contenttags_key__",
+        fieldSchema: { type: "string" },
         metadatas: {
-          label: 'Tags',
+          label: "Tags",
           searchable: true,
           sortable: true,
         },
